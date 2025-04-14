@@ -102,10 +102,16 @@ console.log(squadreCalcio);
 const newSquadreCalcio = [];
 
 for (let i = 0; i < squadreCalcio.length; i++) {
-  let nomeKey = squadreCalcio[i].nome;
-  let falliSubitiKey = squadreCalcio[i].falliSubiti;
-  newSquadreCalcio.name = nomeKey;
-  newSquadreCalcio.falliSubiti = falliSubitiKey;
+  const newObject = {
+    nome: squadreCalcio[i].nome,
+    falliSubiti: squadreCalcio[i].falliSubiti,
+  };
+
+  newSquadreCalcio.push(newObject);
+  //   const nomeKey = squadreCalcio[i].nome;
+  //   const falliSubitiKey = squadreCalcio[i].falliSubiti;
+  //   newSquadreCalcio.name = nomeKey;
+  //   newSquadreCalcio.falliSubiti = falliSubitiKey;
 
   //   newSquadreCalcio.push(squadreCalcio[i].nome);
   //   newSquadreCalcio.push(squadreCalcio[i].falliSubiti);
