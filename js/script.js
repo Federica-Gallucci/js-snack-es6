@@ -48,5 +48,68 @@ console.log(lessWeightBike);
 // Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 // Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
+
+const squadreCalcio = [
+  {
+    nome: "Fiorentina",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Fiorentina",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Juventus",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Napoli",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Roma",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Udinese",
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+];
+
+// ** funzione che genera numeri random
+
+function generateRandomNUmber(min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  return randomNumber;
+}
+
 // Generare numeri random al posto degli 0 nelle proprietà "punti" fatti e "falli subiti".
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+  squadreCalcio[i].puntiFatti = generateRandomNUmber(1, 1000);
+  squadreCalcio[i].falliSubiti = generateRandomNUmber(1, 500);
+}
+console.log(squadreCalcio);
+
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+const newSquadreCalcio = [];
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+  let nomeKey = squadreCalcio[i].nome;
+  let falliSubitiKey = squadreCalcio[i].falliSubiti;
+  newSquadreCalcio.name = nomeKey;
+  newSquadreCalcio.falliSubiti = falliSubitiKey;
+
+  //   newSquadreCalcio.push(squadreCalcio[i].nome);
+  //   newSquadreCalcio.push(squadreCalcio[i].falliSubiti);
+}
+
+console.log("Il nuovo array è:");
+console.log(newSquadreCalcio);
